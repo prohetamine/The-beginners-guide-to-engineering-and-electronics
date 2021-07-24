@@ -74,8 +74,6 @@ void animationDriver () {
   }
 }
 
-/////////////////////////////////////////
-
 void animationController (boolean isSound, String message) {  
   animationSaveState();
   animationMessage = message;
