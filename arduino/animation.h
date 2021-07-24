@@ -45,25 +45,30 @@ void animationDriver () {
     viewController(2, String(' ')); 
     viewController(3, String(' ')); 
 
+    if (animationSound) {
+      if (int(animationTicker) > 23) {
+        tone(SIGNAL, (100 * (int(animationTicker) + 1) + 500), 50);
+      } else {
+        if (int(animationTicker) % 23) {
+          tone(SIGNAL, (20 * (int(animationTicker) + 1) + 500), 50);
+        } else {
+          noTone(SIGNAL); 
+        }
+      }
+    }
+
     if (animationMessage.length() != 0 && int(animationTicker) > 8 && int(animationTicker) < 24) {
-      for (int x = 0; x < 4; x++) {
-        if (animationSound) {
-          tone(SIGNAL, (100 * (int(animationTicker) + 1) * x), 50);  
-        } 
+      for (int x = 0; x < 4; x++) { 
         viewController(x, String(animationMessage[x]));
       }
       return;
     } else {
       if (int(animationTicker) % 8 < 4) {
-        if (animationSound) {
-          tone(SIGNAL, (100 * (int(animationTicker) + 1)), 50);   
-        }
         viewController(int(animationTicker) % 4, String('0')); 
+        return;
       } else {
-        if (animationSound) {
-          tone(SIGNAL, (150 * (int(animationTicker) + 1)), 50);
-        }
         viewController(int(animationTicker) % 4, String(' '));
+        return;
       } 
     }
   }

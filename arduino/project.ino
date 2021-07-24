@@ -41,7 +41,7 @@ void setup () {
   delayRenderRowThree.start(1, AsyncDelay::MILLIS);
   delayRenderRowFour.start(1, AsyncDelay::MILLIS);
   delayButtonHandle.start(1000, AsyncDelay::MILLIS);
-  delayAnimaton.start(10, AsyncDelay::MILLIS);
+  delayAnimaton.start(500, AsyncDelay::MILLIS);
   
   pinMode(A, OUTPUT);
   pinMode(B, OUTPUT);

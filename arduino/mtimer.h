@@ -1,4 +1,4 @@
-int mTimerTicker[4] = { 0,3,0,0 };
+int mTimerTicker[4] = { 0, 0, 0, 5 };
 
 uint32_t mTimerDelta;
 boolean mTimerShow = false;

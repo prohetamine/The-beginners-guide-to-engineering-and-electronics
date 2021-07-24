@@ -1,4 +1,4 @@
-int timerTicker[4] = { 0,0,3,0 };
+int timerTicker[4] = { 0, 0, 3, 0 };
 int timerSecond = 59;
 
 uint32_t timerDelta;
