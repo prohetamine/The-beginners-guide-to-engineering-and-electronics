@@ -3,7 +3,7 @@
 # The beginners guide to engineering and electronics
 > My experience working with microcontroller and electronics development.
 
-Langs: [ru](rureadme.md) [en](readme.md)
+Langs: [ru](https://github.com/prohetamine/The-beginners-guide-to-engineering-and-electronics/blob/main/RUREADME.md) [en](https://github.com/prohetamine/The-beginners-guide-to-engineering-and-electronics/blob/main/README.md)
 
 Two versions on different sites:
 

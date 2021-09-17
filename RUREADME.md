@@ -3,7 +3,7 @@
 # Электроника всем начинающим!
 > Мой опыт работы с микроконтроллерами и разработки электроники.
 
-Языки: [ru](rureadme.md) [en](readme.md)
+Языки: [ru](https://github.com/prohetamine/The-beginners-guide-to-engineering-and-electronics/blob/main/RUREADME.md) [en](https://github.com/prohetamine/The-beginners-guide-to-engineering-and-electronics/blob/main/README.md)
 
 Две версии на разных сайтах:
 
