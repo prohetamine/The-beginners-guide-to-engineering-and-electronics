@@ -3,7 +3,7 @@
 # The beginners guide to engineering and electronics
 > My experience working with microcontroller and electronics development.
 
-Langs: [ru](/rureadme.md) [en](/readme.md)
+Langs: [ru](rureadme.md) [en](readme.md)
 
 Two versions on different sites:
 
