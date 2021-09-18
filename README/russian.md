@@ -1,12 +1,30 @@
-![enter image description here](/media/logo.png)
+![logo](https://github.com/prohetamine/The-beginners-guide-to-engineering-and-electronics/blob/main/media/logo.png)
 
 # Электроника всем начинающим!
 > Мой опыт работы с микроконтроллерами и разработки электроники.
 
-README доступен на языках: [Русский](https://github.com/prohetamine/The-beginners-guide-to-engineering-and-electronics/blob/main/README/russian.md) | [Английский](https://github.com/prohetamine/The-beginners-guide-to-engineering-and-electronics/blob/main/README.md)
+##### README доступен на языках: [Русский](https://github.com/prohetamine/The-beginners-guide-to-engineering-and-electronics/blob/main/README/russian.md) | [Английский](https://github.com/prohetamine/The-beginners-guide-to-engineering-and-electronics/blob/main/README.md)
+
+# Электроника всем начинающим!
+> Мой опыт работы с микроконтроллерами и разработки электроники.
+
+### Почему ?
+Спустя много лет я решил вернуться снова к написанию статей, с новыми знаниями и силами. Знаете, интернет научил меня всему, что я знаю и даже больше чем просто всему. Интернет стал не просто учением в котором тяжело но и боем в котором легко. И я благодарен всем кто так или иначе принял участие в моем обучении, через статьи, описание каких-то технологий, видео на YouTube и просто критику моих работ. Это герои моего времени, только благодаря им я сейчас являюсь не плохим специалистом. Ведь я не учился в этих ваших институтах и образований не получал да и всего у меня 9 классов. Спасибо тем кто пишет интернет.
+
+### Читать
 
 Две версии на разных сайтах:
 
 Читать на Русском языке — [medium](https://prohetamine.medium.com/%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%B8%D0%BA%D0%B0-%D0%B2%D1%81%D0%B5%D0%BC-%D0%BD%D0%B0%D1%87%D0%B8%D0%BD%D0%B0%D1%8E%D1%89%D0%B8%D0%BC-3db893a0b9fc)
 
 Читать на Английском языке — [habr](https://habr) (спасибо за перевод моему другу #### как хочешь представься ####)
+
+### Контакты
+
+Мой Телеграм: [@prohetamine](https://t.me/prohetamine), [канал](https://t.me/prohetamines)
+
+Почта: prohetamine@gmail.com
+
+Донат денег: [patreon](https://www.patreon.com/prohetamine)
+
+Если у вас есть какие-либо вопросы и/или предложения, пожалуйста, напишите мне в телеграмме, если вы найдете ошибки также дайте мне знать, я буду очень благодарен.
