@@ -2,12 +2,11 @@ int modeId = -1;
 int selectId = 0;
 int carret = 0;
 
-/*
- * 0 - time
- * 1 - timer
- * 2 - minutes timer
- * 3 - game
- */
+#define MODE_NONE -1
+#define MODE_TIME 0
+#define MODE_TIMER 1
+#define MODE_MINUTES_TIMER 2
+#define MODE_GAME 3
  
 int clickedFirstButton = 0;
 int clickedMiddleButton = 0;
@@ -35,28 +34,28 @@ void mainOffControllers () {
 }
 
 void menuList () {
-  if (selectId == 0) {
+  if (selectId == MODE_TIME) {
     viewController(0, String('c'));
     viewController(1, String(' '));
     viewController(2, String(' '));
     viewController(3, String(' ')); 
   }
 
-  if (selectId == 1) {
+  if (selectId == MODE_TIMER) {
     viewController(0, String('t'));
     viewController(1, String(' '));
     viewController(2, String(' '));
     viewController(3, String(' ')); 
   }
 
-  if (selectId == 2) {
+  if (selectId == MODE_MINUTES_TIMER) {
     viewController(0, String('m'));
     viewController(1, String('t'));
     viewController(2, String(' '));
     viewController(3, String(' ')); 
   }
 
-  if (selectId == 3) {
+  if (selectId == MODE_GAME) {
     viewController(0, String('g'));
     viewController(1, String(' '));
     viewController(2, String(' '));
@@ -65,17 +64,17 @@ void menuList () {
 }
 
 void buttonFristEvent (int clickedFirst, int clickedMiddle, int clickedLast) {
-  if (modeId == -1) {
+  if (modeId == MODE_NONE) {
     selectId++;
     if (selectId > 3) {
-      selectId = 0;
+      selectId = MODE_TIME;
     }
     mainOffControllers();
     menuList();
   }
 
   if (clickedLast == 1 || clickedLast == 2 || clickedLast == 3 || clickedLast == 4) {
-    if (modeId == 0) {
+    if (modeId == MODE_TIME) {
       for (int i = 0; i < 4; i++) {
         if (carret == i) {
           timeTickerController(i, 1);
@@ -84,7 +83,7 @@ void buttonFristEvent (int clickedFirst, int clickedMiddle, int clickedLast) {
       }
     }
 
-    if (modeId == 1) {
+    if (modeId == MODE_TIMER) {
       for (int i = 0; i < 4; i++) {
         if (carret == i) {
           timerTickerController(i, 1);
@@ -93,7 +92,7 @@ void buttonFristEvent (int clickedFirst, int clickedMiddle, int clickedLast) {
       } 
     }
 
-    if (modeId == 2) {
+    if (modeId == MODE_MINUTES_TIMER) {
       for (int i = 0; i < 4; i++) {
         if (carret == i) {
           mTimerTickerController(i, 1);
@@ -102,7 +101,7 @@ void buttonFristEvent (int clickedFirst, int clickedMiddle, int clickedLast) {
       }     
     }
 
-    if (modeId == 3) {
+    if (modeId == MODE_GAME) {
       for (int i = 0; i < 4; i++) {
         if (carret == i) {
           gameUnLockerPlayerController(i, 1);
@@ -114,17 +113,17 @@ void buttonFristEvent (int clickedFirst, int clickedMiddle, int clickedLast) {
 }
 
 void buttonMiddleEvent (int clickedFirst, int clickedMiddle, int clickedLast) {
-  if (modeId == -1) {
+  if (modeId == MODE_NONE) {
     selectId--;
     if (selectId < 0) {
-      selectId = 3;
+      selectId = MODE_MINUTES_TIMER;
     }
     mainOffControllers();
     menuList();
   }
 
   if (clickedLast == 1 || clickedLast == 2 || clickedLast == 3 || clickedLast == 4) {
-    if (modeId == 0) {
+    if (modeId == MODE_TIME) {
       for (int i = 0; i < 4; i++) {
         if (carret == i) {
           timeTickerController(i, -1);
@@ -133,7 +132,7 @@ void buttonMiddleEvent (int clickedFirst, int clickedMiddle, int clickedLast) {
       }
     }
 
-    if (modeId == 1) {
+    if (modeId == MODE_TIMER) {
       for (int i = 0; i < 4; i++) {
         if (carret == i) {
           timerTickerController(i, -1);
@@ -142,7 +141,7 @@ void buttonMiddleEvent (int clickedFirst, int clickedMiddle, int clickedLast) {
       } 
     }
 
-    if (modeId == 2) {
+    if (modeId == MODE_MINUTES_TIMER) {
       for (int i = 0; i < 4; i++) {
         if (carret == i) {
           mTimerTickerController(i, -1);
@@ -151,7 +150,7 @@ void buttonMiddleEvent (int clickedFirst, int clickedMiddle, int clickedLast) {
       }     
     }
 
-    if (modeId == 3) {
+    if (modeId == MODE_GAME) {
       for (int i = 0; i < 4; i++) {
         if (carret == i) {
           gameUnLockerPlayerController(i, -1);
@@ -163,29 +162,29 @@ void buttonMiddleEvent (int clickedFirst, int clickedMiddle, int clickedLast) {
 }
 
 void buttonLastEvent (int clickedFirst, int clickedMiddle, int clickedLast) {
-  if (modeId == -1) {
+  if (modeId == MODE_NONE) {
     modeId = selectId;
     buttonController(0, 0, 0);
   
-    if (modeId == 0) {
+    if (modeId == MODE_TIME) {
       timeController(true);
     }
 
-    if (modeId == 1) {
+    if (modeId == MODE_TIMER) {
       timerController(true);
     }
 
-    if (modeId == 2) {
+    if (modeId == MODE_MINUTES_TIMER) {
       mTimerController(true);
     }
 
-    if (modeId == 3) {
+    if (modeId == MODE_GAME) {
       gameUnLockerController(true);
     }
     return; 
   }
 
-  if (clickedLast == 1 && modeId == 0) {
+  if (clickedLast == 1 && modeId == MODE_TIME) {
     mainOffControllers();
     for (int i = 0; i < 4; i++) {
       viewController(i, String(timeTicker[i]));
@@ -195,7 +194,7 @@ void buttonLastEvent (int clickedFirst, int clickedMiddle, int clickedLast) {
     return;
   }
 
-  if (modeId == 0) {
+  if (modeId == MODE_TIME) {
     for (int i = 0; i < 4; i++) {
       viewController(i, String(timeTicker[i]));   
     } 
@@ -206,13 +205,13 @@ void buttonLastEvent (int clickedFirst, int clickedMiddle, int clickedLast) {
       return;
     } else {
       carret = 0;
-      modeId = -1;
+      modeId = MODE_NONE;
       timeController(true);
       buttonController(0, 0, 0);
     }
   }
 
-  if (clickedLast == 1 && modeId == 1) {
+  if (clickedLast == 1 && modeId == MODE_TIMER) {
     mainOffControllers();
     for (int i = 0; i < 4; i++) {
       viewController(i, String(timerTicker[i]));
@@ -222,7 +221,7 @@ void buttonLastEvent (int clickedFirst, int clickedMiddle, int clickedLast) {
     return;
   }
 
-  if (modeId == 1) {
+  if (modeId == MODE_TIMER) {
     for (int i = 0; i < 4; i++) {
       viewController(i, String(timerTicker[i]));   
     } 
@@ -233,13 +232,13 @@ void buttonLastEvent (int clickedFirst, int clickedMiddle, int clickedLast) {
       return;
     } else {
       carret = 0;
-      modeId = -1;
+      modeId = MODE_NONE;
       timerController(true);
       buttonController(0, 0, 0);
     }
   }
 
-  if (clickedLast == 1 && modeId == 2) {
+  if (clickedLast == 1 && modeId == MODE_MINUTES_TIMER) {
     mainOffControllers();
     for (int i = 0; i < 4; i++) {
       viewController(i, String(mTimerTicker[i]));
@@ -249,7 +248,7 @@ void buttonLastEvent (int clickedFirst, int clickedMiddle, int clickedLast) {
     return;
   }
 
-  if (modeId == 2) {
+  if (modeId == MODE_MINUTES_TIMER) {
     for (int i = 0; i < 4; i++) {
       viewController(i, String(mTimerTicker[i]));   
     } 
@@ -260,13 +259,13 @@ void buttonLastEvent (int clickedFirst, int clickedMiddle, int clickedLast) {
       return;
     } else {
       carret = 0;
-      modeId = -1;
+      modeId = MODE_NONE;
       mTimerController(true);
       buttonController(0, 0, 0);
     }
   }
 
-  if (clickedLast == 1 && modeId == 3) {
+  if (clickedLast == 1 && modeId == MODE_GAME) {
     mainOffControllers();
     for (int i = 0; i < 4; i++) {
       viewController(i, String(gameUnLockerData[i]));
@@ -276,7 +275,7 @@ void buttonLastEvent (int clickedFirst, int clickedMiddle, int clickedLast) {
     return;
   }
 
-  if (modeId == 3) {
+  if (modeId == MODE_GAME) {
     for (int i = 0; i < 4; i++) {
       viewController(i, String(gameUnLockerData[i]));   
     } 
@@ -287,7 +286,7 @@ void buttonLastEvent (int clickedFirst, int clickedMiddle, int clickedLast) {
       return;
     } else {
       carret = 0;
-      modeId = -1;
+      modeId = MODE_NONE;
       gameUnLockerController(true);
       buttonController(0, 0, 0);
     }
