@@ -11,7 +11,7 @@ After some time I decided to back to writing articles on that topic with a lot o
 
 ### Read
 
-Electronics for all beginners — [habr](https://habr.com/ru/post/593421/)
+Electronics for all beginners — [Habr](https://habr.com/ru/post/593421/)
 
 ### Contacts
 
