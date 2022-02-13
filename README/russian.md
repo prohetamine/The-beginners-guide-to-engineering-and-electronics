@@ -1,6 +1,7 @@
 ![logo](https://github.com/prohetamine/The-beginners-guide-to-engineering-and-electronics/blob/main/media/logo.png)
 
 # Электроника всем начинающим!
+
 > Мой опыт работы с микроконтроллерами и разработки электроники.
 
 ##### README доступен на языках: [Русский](https://github.com/prohetamine/The-beginners-guide-to-engineering-and-electronics/blob/main/README/russian.md) | [Английский](https://github.com/prohetamine/The-beginners-guide-to-engineering-and-electronics/blob/main/README.md)
